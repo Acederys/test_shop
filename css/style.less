@@ -386,6 +386,22 @@ article {
         position: relative;
         margin-bottom: 2%;
 
+        &::before {
+            content: url('../img/like.png');
+            position: absolute;
+            bottom: 1%;
+            left: 7%;
+            display: none;
+        }
+
+        &::after {
+            content: url('../img/comment.png');
+            position: absolute;
+            bottom: 1%;
+            right: 14%;
+            display: none;
+        }
+
         &:hover {
             box-shadow: 0px 5px 47.5px 2.5px rgba(221, 223, 224, 0.75);
         }
@@ -429,6 +445,12 @@ article {
         background: linear-gradient(64deg, rgb(140, 132, 249) 0%, rgb(161, 101, 244) 100%);
         color: @white;
     }
+}
+
+.product-box:hover::after,
+.product-box:hover::before {
+    display: block;
+    top: 5%;
 }
 
 .product-box:hover .product-information .product-btn {

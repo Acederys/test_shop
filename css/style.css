@@ -297,6 +297,20 @@ article {
   position: relative;
   margin-bottom: 2%;
 }
+.product-box::before {
+  content: url('../img/like.png');
+  position: absolute;
+  bottom: 1%;
+  left: 7%;
+  display: none;
+}
+.product-box::after {
+  content: url('../img/comment.png');
+  position: absolute;
+  bottom: 1%;
+  right: 14%;
+  display: none;
+}
 .product-box:hover {
   box-shadow: 0px 5px 47.5px 2.5px rgba(221, 223, 224, 0.75);
 }
@@ -333,6 +347,11 @@ article {
   display: none;
   background: linear-gradient(64deg, #8c84f9 0%, #a165f4 100%);
   color: #ffffff;
+}
+.product-box:hover::after,
+.product-box:hover::before {
+  display: block;
+  top: 5%;
 }
 .product-box:hover .product-information .product-btn {
   display: block !important;
