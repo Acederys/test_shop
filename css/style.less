@@ -28,6 +28,7 @@
     font-weight: 300;
 }
 
+
 @white: #ffffff;
 
 @fd-black: #151515;
@@ -64,6 +65,10 @@
 
 @hr-green: #dcfedb;
 
+@logo-yellow: #ffea00;
+
+@fa-purple: #7048e2;
+
 
 
 body {
@@ -77,6 +82,7 @@ h1 {
     .rob-medium;
     font-size: 2.2em;
     color: @white;
+
 }
 
 h2 {
@@ -98,6 +104,7 @@ h4 {
 }
 
 header {
+
     background: url('../img/header-background-1.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
@@ -115,6 +122,17 @@ button {
 article {
     margin: 0;
     padding: 0;
+}
+
+.logo {
+    background: repeating-linear-gradient(-45deg, @logo-yellow 1px, @logo-yellow 30px,  @white 1px, @white 46px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-long-arrow-right {
+    color: @fa-purple;
+    margin-left: 19px;
 }
 
 .btn {
@@ -386,6 +404,22 @@ article {
         position: relative;
         margin-bottom: 2%;
 
+        &::before {
+            content: url('../img/like.png');
+            position: absolute;
+            bottom: 1%;
+            left: 7%;
+            display: none;
+        }
+
+        &::after {
+            content: url('../img/comment.png');
+            position: absolute;
+            bottom: 1%;
+            right: 14%;
+            display: none;
+        }
+
         &:hover {
             box-shadow: 0px 5px 47.5px 2.5px rgba(221, 223, 224, 0.75);
         }
@@ -429,6 +463,12 @@ article {
         background: linear-gradient(64deg, rgb(140, 132, 249) 0%, rgb(161, 101, 244) 100%);
         color: @white;
     }
+}
+
+.product-box:hover::after,
+.product-box:hover::before {
+    display: block;
+    top: 5%;
 }
 
 .product-box:hover .product-information .product-btn {
@@ -511,29 +551,30 @@ article {
                 font-size: 1.1em;
                 margin-top: 7%;
                 margin-left: 3%;
+                padding-left: 5%;
 
                 &::-webkit-input-placeholder {
                     /* Chrome/Opera/Safari */
                     color: @black;
-                    padding-left: 60px;
+                    padding-left: 2%;
                 }
 
                 &::-moz-placeholder {
                     /* Firefox 19+ */
                     color: @black;
-                    padding-left: 60px;
+                    padding-left: 2%;
                 }
 
                 &:-ms-input-placeholder {
                     /* IE 10+ */
                     color: @black;
-                    padding-left: 60px;
+                    padding-left: 2%;
                 }
 
                 &:-moz-placeholder {
                     /* Firefox 18- */
                     color: @black;
-                    padding-left: 60px;
+                    padding-left: 2%;
                 }
 
                 &:focus {
