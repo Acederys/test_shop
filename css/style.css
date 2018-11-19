@@ -67,6 +67,15 @@ article {
   margin: 0;
   padding: 0;
 }
+.logo {
+  background: repeating-linear-gradient(-45deg, #ffea00 1px, #ffea00 30px, #ffffff 1px, #ffffff 46px);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fa-long-arrow-right {
+  color: #7048e2;
+  margin-left: 19px;
+}
 .btn {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -425,26 +434,27 @@ article {
   font-size: 1.1em;
   margin-top: 7%;
   margin-left: 3%;
+  padding-left: 5%;
 }
 .main-footer-find-input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #333333;
-  padding-left: 60px;
+  padding-left: 2%;
 }
 .main-footer-find-input::-moz-placeholder {
   /* Firefox 19+ */
   color: #333333;
-  padding-left: 60px;
+  padding-left: 2%;
 }
 .main-footer-find-input:-ms-input-placeholder {
   /* IE 10+ */
   color: #333333;
-  padding-left: 60px;
+  padding-left: 2%;
 }
 .main-footer-find-input:-moz-placeholder {
   /* Firefox 18- */
   color: #333333;
-  padding-left: 60px;
+  padding-left: 2%;
 }
 .main-footer-find-input:focus {
   background-image: none;
