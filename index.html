@@ -110,16 +110,16 @@
                 </div>
                 <div class="row">
                     <ul class="catalog-menu col-xl-12">
-                        <li class="catalog-menu-item col-xl-1">Fashion</li>
-                        <li class="catalog-menu-item col-xl-1">Furnitures</li>
-                        <li class="catalog-menu-item col-xl-1">Watches</li>
-                        <li class="catalog-menu-item col-xl-1">Mobile</li>
-                        <li class="catalog-menu-item col-xl-1">Cloth</li>
-                        <li class="catalog-menu-item col-xl-1">Toys</li>
+                        <li class="catalog-menu-item col-xl-1" data-tab="fashion">Fashion</li>
+                        <li class="catalog-menu-item col-xl-1" data-tab="furnitures">Furnitures</li>
+                        <li class="catalog-menu-item col-xl-1" data-tab="watches">Watches</li>
+                        <li class="catalog-menu-item col-xl-1" data-tab="mobile">Mobile</li>
+                        <li class="catalog-menu-item col-xl-1" data-tab="cloth">Cloth</li>
+                        <li class="catalog-menu-item col-xl-1" data-tab="toys">Toys</li>
                     </ul>
                 </div>
                 <ul class=" catalog-product">
-                    <li class="catalog-product-list row justify-content-xl-around">
+                    <li class="catalog-product-list row justify-content-xl-around" data-tab="fashion">
                         <article class="product-box ">
                             <img class="product-img" src="img/clock-1.jpg" alt="Fashion Genuine Chain Watch ">
                             <div class="product-information">
@@ -169,7 +169,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="catalog-product-list row justify-content-xl-around">
+                    <li class="catalog-product-list row justify-content-xl-around" data-tab="furnitures">
                         <article class="product-box ">
                             <img class="product-img" src="img/clock-1.jpg" alt="Fashion Genuine Chain Watch ">
                             <div class="product-information">
@@ -219,7 +219,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="catalog-product-list row justify-content-xl-around">
+                    <li class="catalog-product-list row justify-content-xl-around" data-tab="watches">
                         <article class="product-box ">
                             <img class="product-img" src="img/clock-1.jpg" alt="Fashion Genuine Chain Watch ">
                             <div class="product-information">
@@ -269,7 +269,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="catalog-product-list row justify-content-xl-around">
+                    <li class="catalog-product-list row justify-content-xl-around" data-tab="mobile">
                         <article class="product-box ">
                             <img class="product-img" src="img/clock-1.jpg" alt="Fashion Genuine Chain Watch ">
                             <div class="product-information">
@@ -319,7 +319,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="catalog-product-list row justify-content-xl-around">
+                    <li class="catalog-product-list row justify-content-xl-around" data-tab="cloth">
                         <article class="product-box ">
                             <img class="product-img" src="img/clock-1.jpg" alt="Fashion Genuine Chain Watch ">
                             <div class="product-information">
@@ -369,7 +369,7 @@
                             </div>
                         </article>
                     </li>
-                    <li class="catalog-product-list row justify-content-xl-around">
+                    <li class="catalog-product-list row justify-content-xl-around" data-tab="toys">
                         <article class="product-box ">
                             <img class="product-img" src="img/clock-1.jpg" alt="Fashion Genuine Chain Watch ">
                             <div class="product-information">
@@ -463,24 +463,7 @@
         </section>
     </footer>
     <!-- Optional JavaScript -->
-    <script>
-    var links = document.querySelectorAll('.catalog-menu li');
-    var product = document.querySelectorAll('.catalog-product li');
-    for (var i = 0; i < links.length; i++) {
-        (function(i) {
-            var link = links[i];
-            link.onclick = function() {
-                for (var j = 0; j < product.length; j++) {
-                    var opacity = window.getComputedStyle(product[j]).opacity;
-                    if (opacity == "1") {
-                        product[j].style.opacity = "0"
-                    }
-                }
-                product[i].style.opacity = "1";
-            }
-        })(i);
-    }
-    </script>
+    <script src="js/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
